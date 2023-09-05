@@ -4,24 +4,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/stylemainpage.css">
+    <style>
+        /* Add CSS styles for mobile devices */
+        @media (max-width:700px) {
+            .desktop-content, .tablet-content {
+                display: none;
+            }
+        }
+
+        /* Add CSS styles for tablet and iPad devices */
+        @media (min-width: 700px) and (max-width: 1024px) {
+            .mobile-content, .desktop-content {
+                display: none;
+            }
+        }
+
+        /* Add CSS styles for desktop devices */
+        @media (min-width: 1025px) {
+            .mobile-content, .tablet-content {
+                display: none;
+            }
+        }
+    </style>
     <title>Your Page</title>
 </head>
 <body>
     <div class="login-page">
         <div class="form">
-          <form class="register-form">
-          </form>
-          <form class="login-form">
+            <form class="register-form">
+            </form>
+            <form class="login-form">
+                <div class="mobile-content">
+                  <h1>Page Not Found</h1>
+                  <img src="assets/error.png" alt="Your Image" width="250">
+                  <h1>Try Using iPad</h1>
+                </div>
 
-            <div style="height: 50px;"></div>
-            <img src="assets/logo.png" alt="Your Image" width="250">
-            <div style="height: 50px;"></div>
-           
-            <button>First Button</button>
-            <p></p>
-            <button>Second Button</button>
-          </form>
+                <div class="tablet-content">
+                     <!-- Content for mobile devices -->
+                     <div style="height: 50px;"></div>
+                     <img src="assets/logo.png" alt="Your Image" width="250">
+                     <div style="height: 50px;"></div>
+                     <button>First Project</button>
+                     <p></p>
+                     <button>Second Project</button>
+                </div>
+
+                <div class="desktop-content">
+                  <h1>Page Not Found</h1>
+                  <img src="assets/error.png" alt="Your Image" width="250">
+                  <h1>Try Using iPad</h1>
+                </div>
+            </form>
         </div>
-      </div>
+    </div>
 </body>
 </html>
